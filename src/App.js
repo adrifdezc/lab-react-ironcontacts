@@ -51,14 +51,18 @@ function App() {
   }
 
 
-  
 
   return <div className="App">
+    <div className="Control">
     <h1>IronContacts</h1>
+    {/* </div>
+    <div className="Buttons"> */}
     <button onClick={()=> addContact()}>Add Random Contact</button>
     <button onClick={()=> sortPopularity()}>Sort By Popularity</button>
     <button onClick={()=> sortName()}>Sort By Name</button>
-    
+    </div>
+
+    <div className="tableBox">
     <table className="Table">
         <thead>
           <tr>
@@ -76,10 +80,10 @@ function App() {
           <tr key={contact.id}>
             <td><img src={contact.pictureUrl} alt={contact.name}/></td>
             <td>{contact.name}</td>
-            <td> {contact.popularity}</td>
+            <td> {Math.round(contact.popularity*100)/100}</td>
            <td> {contact.wonOscar && <p>🏆</p>}</td>
             <td>{contact.wonEmmy && <p>🏆</p>}</td>
-            <td> <button onClick={()=> deleteContact(contact.id)}>Delete</button></td>
+            <td> <button className="delete" onClick={()=> deleteContact(contact.id)}><i class="fa fa-trash-o"></i></button></td>
 
           </tr>
           )}
@@ -87,6 +91,7 @@ function App() {
         </tbody>
 
     </table>
+    </div>
 
   </div>;
 }

@@ -1,46 +1,78 @@
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .Table{
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.445);
+}
+
+h1{
+  color:grey;
+  font-size: 50px;
+}
+
+th{
+  background-color:rgba(205, 92, 92, 0.192);
+  padding: 20px 50px;
+}
+
+tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+tr:hover {
+  background-color: #ddd;
+}
+table{
+  width: 1000px
+}
+img{
+  width:50px;
+  transition: 0.2s ease-in;
+}
+img:hover{
+  width:150px;
+}
+.Control{
+  display: flex;
+  flex-direction: column;
+  padding: 70px;
+}
+.Table{
+  margin-right: 40px;
+}
+.Control>button{
+  padding: 20px 20px;
+  margin: 10px;
+  background-color: rgb(87, 140, 255);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: white;
+  font-weight: 900;
+  transition: 0.2s ease-in;
+}
+.Control>button:hover{
+  background-color: #fff;
+  color: rgb(87, 140, 255);
+  border: 1px solid rgb(87, 140, 255);
+}
+
+.delete{
+  background-color: red;
+  transition: 0.2s;
+  padding: 5px 5px;
+  margin: 10px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: white;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.delete:hover{
+  background-color: #fff;
+  color: red;
   border: 1px solid red;
 }
 
-img{
-  width:50px;
-}
